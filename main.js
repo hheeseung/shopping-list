@@ -6,7 +6,7 @@ const removeBtn = document.querySelector('.remove-button');
 const onClickEvent = (e) => {
   e.preventDefault();
 
-  const listContainer = document.createElement('div');
+  const listContainer = document.createElement('li');
   listContainer.setAttribute('class', 'list-container');
 
   const span = document.createElement('span');
