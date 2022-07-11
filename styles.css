@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./background-image.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  padding: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  color: #f95700;
+  box-shadow: 10px 10px 25px 0px rgba(148, 148, 148, 1);
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid #c9c9c9;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: #aaaaaa;
+}
+
+.button,
+.remove-button {
+  cursor: pointer;
+  padding: 8px 10px;
+  border: none;
+  font-size: 20px;
+  background-color: #f95700;
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+.shopping-list {
+  padding: 20px 30px;
+  list-style: none;
+}
+
+.list-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.list-container span {
+  font-size: 20px;
+  margin: 0px 5px;
+}
+
+.check,
+.erase {
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+  color: inherit;
+}
+
+.check {
+  font-size: 20px;
+}
+
+.remove-button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  transition: all 0.3s linear;
+}
+
+.remove-button:hover {
+  transform: scale(1.2);
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Shopping List</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/a4dc4c6470.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Shopping List</h1>
+      <form class="shopping-input">
+        <input
+          class="input"
+          type="text"
+          placeholder="Enter what you want to buy"
+          autofocus
+        />
+        <button class="button" type="submit">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </form>
+      <ul class="shopping-list"></ul>
+      <button class="remove-button">
+        <i class="fa-solid fa-trash-can"></i>
+      </button>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
