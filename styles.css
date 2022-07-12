@@ -45,8 +45,8 @@ input::placeholder {
   color: #aaaaaa;
 }
 
-.button,
-.remove-button {
+.add,
+.removeAll {
   cursor: pointer;
   padding: 8px 10px;
   border: none;
@@ -69,28 +69,29 @@ input::placeholder {
 
 .list-container span {
   font-size: 20px;
-  margin: 0px 5px;
+  margin-right: 5px;
 }
 
 .check,
-.erase {
+.remove {
   cursor: pointer;
   border: none;
   background-color: #ffffff;
   color: inherit;
 }
 
-.check {
-  font-size: 20px;
-}
-
-.remove-button {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
+.add,
+.removeAll {
   transition: all 0.3s linear;
 }
 
-.remove-button:hover {
-  transform: scale(1.2);
+.add:hover,
+.removeAll:hover {
+  transform: scale(1.1);
+}
+
+.removeAll {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 }

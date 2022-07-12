@@ -1,9 +1,10 @@
+const listForm = document.querySelector('.list-form');
 const input = document.querySelector('.input');
 const button = document.querySelector('.button');
 const shoppingList = document.querySelector('.shopping-list');
-const removeBtn = document.querySelector('.remove-button');
+const removeAll = document.querySelector('.removeAll');
 
-const onClickEvent = (e) => {
+const onSubmit = (e) => {
   e.preventDefault();
 
   const listContainer = document.createElement('li');
@@ -13,16 +14,16 @@ const onClickEvent = (e) => {
 
   const check = document.createElement('button');
   check.setAttribute('class', 'check');
-  check.innerText = '✔';
+  check.innerHTML = '<i class="fa-solid fa-check"></i>';
   check.addEventListener('click', () => {
     span.style.textDecoration = 'line-through';
     listContainer.style.color = '#f5a276';
   });
 
-  const erase = document.createElement('button');
-  erase.setAttribute('class', 'erase');
-  erase.innerHTML = '<i class="fa-solid fa-x"></i>';
-  erase.addEventListener('click', () => {
+  const remove = document.createElement('remove');
+  remove.setAttribute('class', 'remove');
+  remove.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+  remove.addEventListener('click', () => {
     listContainer.remove();
   });
 
@@ -31,7 +32,7 @@ const onClickEvent = (e) => {
   listContainer.appendChild(check);
   listContainer.appendChild(span);
   span.innerText = value;
-  listContainer.appendChild(erase);
+  listContainer.appendChild(remove);
   input.value = '';
 
   if (value === '') {
@@ -40,7 +41,7 @@ const onClickEvent = (e) => {
   }
 };
 
-button.addEventListener('click', onClickEvent);
-removeBtn.addEventListener('click', () => {
+listForm.addEventListener('submit', onSubmit);
+removeAll.addEventListener('click', () => {
   shoppingList.innerHTML = '';
 });
