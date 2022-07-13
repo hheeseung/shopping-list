@@ -13,7 +13,7 @@ body {
   background-position: center;
 }
 
-.container {
+.list {
   position: relative;
   width: 500px;
   height: 500px;
@@ -29,7 +29,7 @@ body {
   display: none;
 }
 
-input {
+.list__input {
   width: 80%;
   padding: 10px;
   font-size: 20px;
@@ -37,16 +37,16 @@ input {
   border: 1px solid #c9c9c9;
 }
 
-input:focus {
+.list__input:focus {
   outline: none;
 }
 
-input::placeholder {
+.list__input::placeholder {
   color: #aaaaaa;
 }
 
-.button,
-.remove-button {
+.list__add-btn,
+.list__remove-all-btn {
   cursor: pointer;
   padding: 8px 10px;
   border: none;
@@ -56,41 +56,51 @@ input::placeholder {
   border-radius: 50%;
 }
 
-.shopping-list {
+.items {
   padding: 20px 30px;
   list-style: none;
 }
 
-.list-container {
+.item__row {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.list-container span {
-  font-size: 20px;
-  margin: 0px 5px;
-}
-
-.check,
-.erase {
+.item__check,
+.item__remove-btn {
   cursor: pointer;
   border: none;
   background-color: #ffffff;
   color: inherit;
 }
 
-.check {
-  font-size: 20px;
+.item__check {
+  max-width: fit-content;
 }
 
-.remove-button {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
+.checked {
+  text-decoration: line-through;
+  color: #ffaf84;
+}
+
+.item__name {
+  font-size: 20px;
+  margin: 0px 10px;
+}
+
+.list__add-btn,
+.list__remove-all-btn {
   transition: all 0.3s linear;
 }
 
-.remove-button:hover {
-  transform: scale(1.2);
+.list__add-btn:hover,
+.list__remove-all-btn:hover {
+  transform: scale(1.1);
+}
+
+.list__remove-all-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 }

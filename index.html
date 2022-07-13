@@ -10,26 +10,26 @@
       src="https://kit.fontawesome.com/a4dc4c6470.js"
       crossorigin="anonymous"
     ></script>
+    <script src="main.js" defer></script>
   </head>
   <body>
-    <div class="container">
+    <div class="list">
       <h1>Shopping List</h1>
-      <form class="shopping-input">
+      <form class="list__form">
         <input
-          class="input"
+          class="list__input"
           type="text"
           placeholder="Enter what you want to buy"
           autofocus
         />
-        <button class="button" type="submit">
+        <button class="list__add-btn" type="submit">
           <i class="fa-solid fa-plus"></i>
         </button>
       </form>
-      <ul class="shopping-list"></ul>
-      <button class="remove-button">
+      <ul class="items"></ul>
+      <button class="list__remove-all-btn">
         <i class="fa-solid fa-trash-can"></i>
       </button>
     </div>
   </body>
-  <script src="main.js"></script>
 </html>
